@@ -5,19 +5,16 @@ fun main(){
     println(p1==p2)
 
     println(p1.toString())
-    println(p1)
+    println(p2.toString())
     println(p1.Symmetrytox())
 
 }
-interface IFigure {
-    fun Symmetrytox(): String
 
-}
 
-class Point(x: Float, y: Float):IFigure {
+class Point(x: Float, y: Float) {
 
     private val abcisa: Float = x
-    private val ordinati: Float = y
+    private var ordinati: Float = y
 
     override fun equals(other: Any?): Boolean {
         if (other is Point) {
@@ -31,8 +28,9 @@ class Point(x: Float, y: Float):IFigure {
         return "წერტილის კორდინატები (x;y) ($abcisa;$ordinati)"
     }
 
-    override fun Symmetrytox(): String {
-        return "x-ის მიმართ სიმეტრიული წერტილის კორდინატები (-x;y) ($abcisa;-$ordinati)"
+     fun Symmetrytox() {
+         ordinati = - ordinati
+        println("x-ის მიმართ სიმეტრიული წერტილის კორდინატები (x;-y) ($abcisa;$ordinati)")
     }
 
 }
