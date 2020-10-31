@@ -13,12 +13,13 @@ fun main() {
     println(f2.toString())
 
 
-    f1.gamokleba(f2)
-    println(f1)
+   println(f1.gamokleba(f2))
 
     f1 = Fraction( 2F, 4F)
     f1.division(f2)
     println(f1)
+
+
 
 }
 
@@ -57,20 +58,9 @@ class Fraction(n: Float, d: Float) {
         denominator *= gamyofi.numerator
     }
 
-    private fun Mamravli(toMultiple: Float): Fraction {
-        return Fraction(numerator * toMultiple, denominator * toMultiple)
+    fun gamokleba(minus: Fraction): Fraction{
+        return Fraction(numerator*minus.denominator-minus.numerator*denominator,denominator*minus.denominator)
     }
-
-
-    fun gamokleba(toMinus: Fraction) {
-        val f1: Fraction = this.Mamravli(toMinus.denominator)
-        val f2: Fraction = toMinus.Mamravli(this.denominator)
-
-        this.numerator = f1.numerator - f2.numerator
-        this.denominator = f1.denominator
-    }
-
 
 
 }
-
