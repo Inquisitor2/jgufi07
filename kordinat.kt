@@ -32,7 +32,7 @@ class Point(x: Float, y: Float):IFigure {
     }
 
     override fun Symmetrytox(): String {
-        return "x-ის მიმართ სიმეტრიული წერტილის კორდინატები (-x;y) (-$abcisa;$ordinati)"
+        return "x-ის მიმართ სიმეტრიული წერტილის კორდინატები (-x;y) ($abcisa;-$ordinati)"
     }
 
 }
